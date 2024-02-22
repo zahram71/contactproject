@@ -1,0 +1,112 @@
+#root{padding:0!important;max-width:unset!important}
+
+.contact-card {
+    display: flex;
+    padding: 10px;
+    color: #ffffff;
+    background-color: rgb(42, 84, 104);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 10px 10px 25px -16px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    max-width: 500px;
+    max-height: 125px;
+    margin-bottom: 10px;
+    width: 50%;
+    aspect-ratio: 1/1;
+    margin:20px
+  }
+  
+  .contact-card p {
+    margin-left: 10px;
+    margin-top: 0;
+  }
+  
+  button {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+
+  .container {
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  nav {
+    height: 100px;
+    width: 100%; 
+    background-color: cyan;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .brand-name {
+      text-align:left;
+      font-size: 2rem;
+      min-width:1000px
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      width: 50px;
+      cursor: pointer;
+      position: fixed;
+      top: 5px;
+      right: 5px;
+      .line {
+        height: 8px;
+        width: 100%;
+        background-color: gray;
+        border-radius: 100vw;
+        margin: 4px;
+      }
+    }
+    .links-container {
+      list-style: none;
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      .link {
+        padding: 1rem;
+        
+        align-self: center;
+        display: flex;
+        align-items: center;
+       
+        cursor: pointer;
+        &:hover {
+          background-color: gray
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    nav {
+      height: fit-content;
+      justify-content: flex-end;
+      .brand-name {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+        margin: 0.5rem;
+      }
+      .links-container {
+        display: none;
+        &.active {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+
